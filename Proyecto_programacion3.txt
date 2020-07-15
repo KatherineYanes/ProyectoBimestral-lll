@@ -14,7 +14,7 @@ namespace arduino
             Console.WriteLine("1. encender lucesita");
             Console.WriteLine("2. apagar lucesita");
             e= Convert.ToInt32(Console.ReadLine());
-           while (x != 3)
+           while (e != 3)
            {
             if (Arduino.IsOpen)
             {
