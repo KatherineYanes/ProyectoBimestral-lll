@@ -1,0 +1,29 @@
+int led=8; 
+char dato;
+
+void setup()
+{
+  Serial.begin (9600);
+  pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+  
+  if (Serial.available()>0)
+  {
+    dato=Serial.read();
+    
+    if (dato=='e')
+    {
+      digitalWrite(led,HIGH);
+    }
+    if (dato=='a')
+    {
+      digitalWrite (led,LOW);
+    }
+    
+  }
+  
+  delay(1000); 
+}
